@@ -133,6 +133,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -347,7 +360,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Lumin Veil_0: 7410928432924509519
+      Lumin Veil_1: -6405088717201531486
+      Lumin Veil_2: 4866076673505786296
+      Lumin Veil_3: -7990687467059082255
+      Lumin Veil_4: 7383949916497667154
+      Lumin Veil_5: -1232343675225557023
+      Lumin Veil_6: -9131254473435080858
+      Lumin Veil_7: -7991019570671486533
+      Lumin Veil_8: -2363858509408182467
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
