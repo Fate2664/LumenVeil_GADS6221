@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 276250524}
   - component: {fileID: 276250523}
   - component: {fileID: 276250525}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -390,6 +390,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &615522687
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 615522688}
+  m_Layer: 0
+  m_Name: CeilingCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &615522688
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615522687}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.87, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1288509217}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,6 +505,42 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1265755141
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1265755142}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1265755142
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265755141}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.94, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1288509217}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1288509217 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 431058113376614112, guid: 32e0daa4a21e67a46941b752cb54ea31, type: 3}
+  m_PrefabInstance: {fileID: 1065703571598574618}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1065703571598574618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -522,13 +589,39 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1059846058474054600, guid: 32e0daa4a21e67a46941b752cb54ea31, type: 3}
+      propertyPath: crouchSpeed
+      value: 0.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 1059846058474054600, guid: 32e0daa4a21e67a46941b752cb54ea31, type: 3}
+      propertyPath: groundCheck
+      value: 
+      objectReference: {fileID: 1265755142}
+    - target: {fileID: 1059846058474054600, guid: 32e0daa4a21e67a46941b752cb54ea31, type: 3}
+      propertyPath: ceilingCheck
+      value: 
+      objectReference: {fileID: 615522688}
+    - target: {fileID: 1059846058474054600, guid: 32e0daa4a21e67a46941b752cb54ea31, type: 3}
+      propertyPath: whatIsGround.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1059846058474054600, guid: 32e0daa4a21e67a46941b752cb54ea31, type: 3}
+      propertyPath: crouchSpeedMultiplier
+      value: 0.514
+      objectReference: {fileID: 0}
     - target: {fileID: 5166384976126579116, guid: 32e0daa4a21e67a46941b752cb54ea31, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 431058113376614112, guid: 32e0daa4a21e67a46941b752cb54ea31, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 615522688}
+    - targetCorrespondingSourceObject: {fileID: 431058113376614112, guid: 32e0daa4a21e67a46941b752cb54ea31, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1265755142}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32e0daa4a21e67a46941b752cb54ea31, type: 3}
 --- !u!1660057539 &9223372036854775807
