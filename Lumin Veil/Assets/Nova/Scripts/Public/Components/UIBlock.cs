@@ -961,6 +961,11 @@ namespace Nova
         internal void InternalMethod_90(InternalType_523 InternalParameter_73) => InternalProperty_24.InternalMethod_2076(InternalParameter_73);
 
         internal void InternalMethod_91<TEvent>(TEvent InternalParameter_74, Type InternalParameter_75 = null) where TEvent : struct, IEvent => InternalType_522.InternalMethod_2077(this, InternalParameter_74, InternalParameter_75);
+
+        public void AddGestureHandler<T1, T2>(UIEventHandler<Gesture.OnHover, T2> handleHover)
+        {
+            throw new NotImplementedException();
+        }
         #endregion
     }
 }
