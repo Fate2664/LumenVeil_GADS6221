@@ -29,15 +29,15 @@ public class SettingsMenu : MonoBehaviour
 
     private void HandleSliderDragged(Gesture.OnDrag evt, SliderVisuals target)
     {
-        Vector3 currentPointerPos = evt.PointerPositions.Current;
+        Vector3 localPointerPos = target.SliderBackground.transform.InverseTransformPoint(evt.PointerPositions.Current);
 
-        float localXPos = target.SliderBackground.transform.InverseTransformDirection(currentPointerPos).x;
         float sliderWidth = target.SliderBackground.CalculatedSize.X.Value;
 
-        float distanceFromLeft = localXPos + .5f * sliderWidth;
-        float percentFromLeft = Mathf.Clamp01(distanceFromLeft / sliderWidth);
+        float distanceFromLeft = Mathf.Clamp(localPointerPos.x + (sliderWidth * 0.5f), 0f, sliderWidth);
 
-        FloatSetting.value = FloatSetting.Min + percentFromLeft * (FloatSetting.Max - FloatSetting.Min);
+        float percentFromLeft = distanceFromLeft / sliderWidth;
+
+        FloatSetting.value = Mathf.Lerp(FloatSetting.Min, FloatSetting.Max, percentFromLeft);
 
         target.FillBar.Size.X.Percent = percentFromLeft;
         target.ValueLabel.Text = FloatSetting.DisplayValue;
