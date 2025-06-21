@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
     {
         shouldJump = false;
         shouldCrouch = false;
-
+        Debug.Log(grounded);
         moveDir = Input.GetAxis("Horizontal");
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
