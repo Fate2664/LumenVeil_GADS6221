@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private Transform ceilingCheck;
     [SerializeField] private Collider2D crouchDisableCollider;
+    [SerializeField] private Transform playerGraphics;
+    [SerializeField] private Vector3 lockedScale = new Vector3(3f, 3f, 3f);
 
     [Header("Animator Component")]
     [Space(10)]
@@ -61,6 +63,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        playerGraphics.localScale = lockedScale;
         shouldJump = false;
         shouldCrouch = false;
         moveDir = Input.GetAxis("Horizontal");
@@ -72,6 +75,9 @@ public class PlayerController : MonoBehaviour
         {
             shouldCrouch = true;
         }
+
+        bool isInAir = !grounded && Mathf.Abs(rb.linearVelocity.y) > 0.1f;
+        animator.SetBool("isJumping", isInAir);
 
         MoveCharacter(moveDir,moveSpeed, shouldCrouch ,shouldJump);
     }
@@ -147,16 +153,14 @@ public class PlayerController : MonoBehaviour
         }
         float modifiedSpeed = crouch ? moveSpeed * crouchSpeedMultiplier : moveSpeed;
         rb.linearVelocity = new Vector2(direction * modifiedSpeed, rb.linearVelocity.y);
+        animator.SetFloat("Speed", Mathf.Abs(rb.linearVelocity.x));
 
         if (grounded && jump)
         {
             grounded = false;
             rb.AddForce(new Vector2(rb.linearVelocity.x, jumpForce * 100));
-            if (animator != null)
-            {
-                animator.SetBool("isJumping", true);
-            }
         }
     }
+
 
 }

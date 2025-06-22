@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player_Idle
+  m_Name: Player_Jump
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -20,7 +20,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: -0.59, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -28,8 +28,8 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.625
-        value: {x: 0, y: 0, z: 0}
+        time: 0.75
+        value: {x: 0, y: -0.59, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -46,21 +46,17 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 3824530337607672712, guid: a6ec356454bfa034e9f18bf9f6dd6533, type: 3}
-    - time: 0.125
-      value: {fileID: 3881174997055470778, guid: a6ec356454bfa034e9f18bf9f6dd6533, type: 3}
+      value: {fileID: 1848934535, guid: 7704279b4a6dbed4a8dc2c3daecc2619, type: 3}
     - time: 0.25
-      value: {fileID: 4527411475185679747, guid: a6ec356454bfa034e9f18bf9f6dd6533, type: 3}
-    - time: 0.375
-      value: {fileID: 7592154962357500959, guid: a6ec356454bfa034e9f18bf9f6dd6533, type: 3}
-    - time: 0.5
-      value: {fileID: 4853019547865629063, guid: a6ec356454bfa034e9f18bf9f6dd6533, type: 3}
+      value: {fileID: -629429279, guid: 7704279b4a6dbed4a8dc2c3daecc2619, type: 3}
+    - time: 0.75
+      value: {fileID: 1308933157, guid: 7704279b4a6dbed4a8dc2c3daecc2619, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 8
+  m_SampleRate: 4
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -86,17 +82,15 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 3824530337607672712, guid: a6ec356454bfa034e9f18bf9f6dd6533, type: 3}
-    - {fileID: 3881174997055470778, guid: a6ec356454bfa034e9f18bf9f6dd6533, type: 3}
-    - {fileID: 4527411475185679747, guid: a6ec356454bfa034e9f18bf9f6dd6533, type: 3}
-    - {fileID: 7592154962357500959, guid: a6ec356454bfa034e9f18bf9f6dd6533, type: 3}
-    - {fileID: 4853019547865629063, guid: a6ec356454bfa034e9f18bf9f6dd6533, type: 3}
+    - {fileID: 1848934535, guid: 7704279b4a6dbed4a8dc2c3daecc2619, type: 3}
+    - {fileID: -629429279, guid: 7704279b4a6dbed4a8dc2c3daecc2619, type: 3}
+    - {fileID: 1308933157, guid: 7704279b4a6dbed4a8dc2c3daecc2619, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.625
+    m_StopTime: 1
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -126,7 +120,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.625
+        time: 0.75
         value: 0
         inSlope: 0
         outSlope: 0
@@ -148,7 +142,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
+        value: -0.59
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -156,8 +150,8 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.625
-        value: 0
+        time: 0.75
+        value: -0.59
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -177,16 +171,7 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.625
+        time: 0.75
         value: 0
         inSlope: 0
         outSlope: 0

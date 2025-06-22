@@ -1,0 +1,741 @@
+fileFormatVersion: 2
+guid: bdbd279cefd7a7944b094b100694e5f5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2365889714894670635
+    second: Dream_Character_Sprite_Sheet_0
+  - first:
+      213: 2846097362414417873
+    second: Dream_Character_Sprite_Sheet_1
+  - first:
+      213: -1925076975710532079
+    second: Dream_Character_Sprite_Sheet_2
+  - first:
+      213: 7829269671045536518
+    second: Dream_Character_Sprite_Sheet_3
+  - first:
+      213: -3208029920308246556
+    second: Dream_Character_Sprite_Sheet_4
+  - first:
+      213: -2364496245208396198
+    second: Dream_Character_Sprite_Sheet_5
+  - first:
+      213: 4761635089432797244
+    second: Dream_Character_Sprite_Sheet_6
+  - first:
+      213: 3638952963139420522
+    second: Dream_Character_Sprite_Sheet_7
+  - first:
+      213: -3335202295409658485
+    second: Dream_Character_Sprite_Sheet_8
+  - first:
+      213: -5526808146238021970
+    second: Dream_Character_Sprite_Sheet_9
+  - first:
+      213: -517751973028650888
+    second: Dream_Character_Sprite_Sheet_10
+  - first:
+      213: -7034996635200239474
+    second: Dream_Character_Sprite_Sheet_11
+  - first:
+      213: 216833509767184660
+    second: Dream_Character_Sprite_Sheet_12
+  - first:
+      213: -8992700060605936753
+    second: Dream_Character_Sprite_Sheet_13
+  - first:
+      213: 5179677688010080610
+    second: Dream_Character_Sprite_Sheet_14
+  - first:
+      213: 207625675413214439
+    second: Dream_Character_Sprite_Sheet_15
+  - first:
+      213: -8573246467015291609
+    second: Dream_Character_Sprite_Sheet_16
+  - first:
+      213: -8997492388571610769
+    second: Dream_Character_Sprite_Sheet_17
+  - first:
+      213: -2733259188152196812
+    second: Dream_Character_Sprite_Sheet_18
+  - first:
+      213: 3562206505029904323
+    second: Dream_Character_Sprite_Sheet_19
+  - first:
+      213: 7370555466221805907
+    second: Dream_Character_Sprite_Sheet_20
+  - first:
+      213: -5911890496841633761
+    second: Dream_Character_Sprite_Sheet_21
+  - first:
+      213: -4226614544176325156
+    second: Dream_Character_Sprite_Sheet_22
+  - first:
+      213: 620794932254173307
+    second: Dream_Character_Sprite_Sheet_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dream_Character_Sprite_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 3
+        width: 36
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8548d2f84bc4b4418c8fc3e91c074e8
+      internalID: 59617099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dream_Character_Sprite_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 3
+        width: 36
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6727cdcf360241a42a6440c152859e10
+      internalID: -2033288006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dream_Character_Sprite_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 3
+        width: 36
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50f2ead88c7717244b0c29391e8f3aa8
+      internalID: 2088962604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dream_Character_Sprite_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 3
+        width: 36
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70b633170912408449b8b1ac4d2ae45e
+      internalID: -105042869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dream_Character_Sprite_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 3
+        width: 36
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb3a46e4a2e06e24d9a8147d6286a759
+      internalID: 1926590074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dream_Character_Sprite_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 3
+        width: 48
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24447ab9b21159a4e81a77ab96cc1a16
+      internalID: -1296292610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dream_Character_Sprite_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 3
+        width: 52
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c694a5abd9e5447bd171e5f0bf0005
+      internalID: -2066212100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dream_Character_Sprite_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 3
+        width: 39
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53590242b1e60d04784d63c9fe6e213f
+      internalID: -741457138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dream_Character_Sprite_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 3
+        width: 39
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 528e080ac25ae5a4b9b132b4065e237b
+      internalID: -1553604054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dream_Character_Sprite_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1206
+        y: 3
+        width: 43
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b196cd2dd813fa24b9007eef417d4a22
+      internalID: 1163623273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dream_Character_Sprite_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 3
+        width: 47
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1b92618ffee27c4897befeb644eaa94
+      internalID: 863674520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dream_Character_Sprite_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 3
+        width: 37
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 538f827eb56293d44aab355c97add5d7
+      internalID: -1272217737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dream_Character_Sprite_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 3
+        width: 38
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4a7112eb65946d49b784d461e8b7872
+      internalID: -788964314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dream_Character_Sprite_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 3
+        width: 46
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b16097b6357163d459786065747f6bee
+      internalID: 1595477298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dream_Character_Sprite_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1843
+        y: 3
+        width: 50
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b281b38bc745d8f4b9e5d98dc1700976
+      internalID: -50366816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dream_Character_Sprite_Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1972
+        y: 3
+        width: 66
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a76795905873af4a86691b9d049e6fd
+      internalID: 47956907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dream_Character_Sprite_Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 3
+        width: 36
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eb38dd06793654418bb6eee69103301
+      internalID: -922984187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dream_Character_Sprite_Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 2227
+        y: 3
+        width: 45
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26a2b8e9498b98046950aa4d1c45910a
+      internalID: -678437183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dream_Character_Sprite_Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 2356
+        y: 3
+        width: 36
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce9cb44c09fe31745821b2ba7f182886
+      internalID: 2139856338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dream_Character_Sprite_Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 2484
+        y: 3
+        width: 36
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 684872939c5a84d439da9636c9062a2d
+      internalID: -1818681292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dream_Character_Sprite_Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 2611
+        y: 3
+        width: 36
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dabc5f05fedc75043a9da3aaf9a6b88a
+      internalID: -777576074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dream_Character_Sprite_Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 2728
+        y: 30
+        width: 84
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0998edc9a8cf4744eb6a339200d2ed7f
+      internalID: 1451129788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dream_Character_Sprite_Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 2868
+        y: 3
+        width: 36
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e119ab842536e944b2136d595d79927
+      internalID: -946162732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dream_Character_Sprite_Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 2995
+        y: 5
+        width: 41
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 724bc2323326b444aa73e7b1424e9bfa
+      internalID: 1704873278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 3bbd151bd9ef5aa4095fbce5077c3c65
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Dream_Character_Sprite_Sheet_0: 59617099
+      Dream_Character_Sprite_Sheet_1: -2033288006
+      Dream_Character_Sprite_Sheet_10: 863674520
+      Dream_Character_Sprite_Sheet_11: -1272217737
+      Dream_Character_Sprite_Sheet_12: -788964314
+      Dream_Character_Sprite_Sheet_13: 1595477298
+      Dream_Character_Sprite_Sheet_14: -50366816
+      Dream_Character_Sprite_Sheet_15: 47956907
+      Dream_Character_Sprite_Sheet_16: -922984187
+      Dream_Character_Sprite_Sheet_17: -678437183
+      Dream_Character_Sprite_Sheet_18: 2139856338
+      Dream_Character_Sprite_Sheet_19: -1818681292
+      Dream_Character_Sprite_Sheet_2: 2088962604
+      Dream_Character_Sprite_Sheet_20: -777576074
+      Dream_Character_Sprite_Sheet_21: 1451129788
+      Dream_Character_Sprite_Sheet_22: -946162732
+      Dream_Character_Sprite_Sheet_23: 1704873278
+      Dream_Character_Sprite_Sheet_3: -105042869
+      Dream_Character_Sprite_Sheet_4: 1926590074
+      Dream_Character_Sprite_Sheet_5: -1296292610
+      Dream_Character_Sprite_Sheet_6: -2066212100
+      Dream_Character_Sprite_Sheet_7: -741457138
+      Dream_Character_Sprite_Sheet_8: -1553604054
+      Dream_Character_Sprite_Sheet_9: 1163623273
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

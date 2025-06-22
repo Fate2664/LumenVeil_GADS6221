@@ -1,64 +1,70 @@
 fileFormatVersion: 2
-guid: a6ec356454bfa034e9f18bf9f6dd6533
+guid: d0157b6e9496051499ed0539780e4818
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3824530337607672712
-    second: Dream Character Sprite Sheet_0
+      213: 2566739535865308962
+    second: TileMap2_0
   - first:
-      213: 3881174997055470778
-    second: Dream Character Sprite Sheet_1
+      213: -289738984576760467
+    second: TileMap2_1
   - first:
-      213: 4527411475185679747
-    second: Dream Character Sprite Sheet_2
+      213: 6049853807682793137
+    second: TileMap2_2
   - first:
-      213: 7592154962357500959
-    second: Dream Character Sprite Sheet_3
+      213: 68068773099118379
+    second: TileMap2_3
   - first:
-      213: 4853019547865629063
-    second: Dream Character Sprite Sheet_4
+      213: -1605688791467125262
+    second: TileMap2_4
   - first:
-      213: 1159641034320989091
-    second: Dream Character Sprite Sheet_5
+      213: 7750564829723329593
+    second: TileMap2_5
   - first:
-      213: 1634119261104265194
-    second: Dream Character Sprite Sheet_6
+      213: 1209589408619982012
+    second: TileMap2_6
   - first:
-      213: -300043612657930171
-    second: Dream Character Sprite Sheet_7
+      213: -8036632086330522272
+    second: TileMap2_7
   - first:
-      213: 7268731159793734696
-    second: Dream Character Sprite Sheet_8
+      213: 8709199945666222226
+    second: TileMap2_8
   - first:
-      213: -5472710233035124654
-    second: Dream Character Sprite Sheet_9
+      213: 4520553451186647800
+    second: TileMap2_9
   - first:
-      213: 441284360265466555
-    second: Dream Character Sprite Sheet_10
+      213: 931067082030082606
+    second: TileMap2_10
   - first:
-      213: -8076054591361531534
-    second: Dream Character Sprite Sheet_11
+      213: -1970008014351732746
+    second: TileMap2_11
   - first:
-      213: -5468758219461189365
-    second: Dream Character Sprite Sheet_12
+      213: 5862047002839970412
+    second: TileMap2_12
   - first:
-      213: 447267962607653295
-    second: Dream Character Sprite Sheet_13
+      213: -603942071250832750
+    second: TileMap2_13
   - first:
-      213: 8467703684091802996
-    second: Dream Character Sprite Sheet_14
+      213: 8565228158674561594
+    second: TileMap2_14
   - first:
-      213: -2837249090355727460
-    second: Dream Character Sprite Sheet_15
+      213: 3418374946243604290
+    second: TileMap2_15
   - first:
-      213: -8664673028777597135
-    second: Dream Character Sprite Sheet_16
+      213: -4011477719237666744
+    second: TileMap2_16
   - first:
-      213: -7420907883925055275
-    second: Dream Character Sprite Sheet_17
+      213: -1340438433333141445
+    second: TileMap2_17
   - first:
-      213: 1634196999047347255
-    second: Dream Character Sprite Sheet_18
+      213: 4640829633504903617
+    second: TileMap2_18
+  - first:
+      213: 3574784826973508471
+    second: TileMap2_19
+  - first:
+      213: 6469272352952487856
+    second: TileMap2_20
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,9 +132,9 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
@@ -154,419 +160,463 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dream Character Sprite Sheet_0
+      name: TileMap2_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 128
-        height: 128
+        x: 1
+        y: 63
+        width: 12
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8836fcd2416731530800000000000000
-      internalID: 3824530337607672712
+      spriteID: 4f9dd2c4c78e06747b4e1f090648e2df
+      internalID: 915080611
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dream Character Sprite Sheet_1
+      name: TileMap2_1
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 61
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2482d6021dfefa249a1e09cbdac87468
+      internalID: 1228961603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileMap2_2
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 64
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67d1ee5325756ff43adfc1c363185e46
+      internalID: -1106509275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileMap2_3
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 46
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc812d2a396ffaf4896e6a5accc24119
+      internalID: 2117634152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileMap2_4
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 41
+        width: 42
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16e30e7c7e0bca443ab82ffa777f2910
+      internalID: 1221519834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileMap2_5
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 47
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0762008a8285c454b8800a4bf398c066
+      internalID: 550594600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileMap2_6
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 28
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6862a647e90629f498140454b0815dbb
+      internalID: 1796458830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileMap2_7
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 22
+        width: 42
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 904bb8e61082f48459375708bfe0350b
+      internalID: -947101882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileMap2_8
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 20
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e1d15f47ea38694b85ff73e5bf68dbf
+      internalID: -2110388205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileMap2_9
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 20
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0219e5e43b7bfb48a6bda675194cd85
+      internalID: 1620975486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileMap2_10
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 20
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eabead5838c248a409e2c5d38553c763
+      internalID: -753121131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileMap2_11
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 20
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf66ee11aae72ab438b92fe9a9461de4
+      internalID: 789360595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileMap2_12
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 20
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 967bf229404abad47a88eea185144be3
+      internalID: 78519338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileMap2_13
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 30
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1890325ef43a3154d910c5e6136e2116
+      internalID: 1438800810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileMap2_14
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 10
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aa3dabb9746f2c47a2a56ec546c3f38
+      internalID: -1723244589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileMap2_15
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 223e2e3d217bc7546b16d99de0bda43a
+      internalID: 167573032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileMap2_16
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 0
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4aa16ad151370c4bacb9c8557f0e2b1
+      internalID: 606201967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileMap2_17
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 0
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9c2e79509178b241b3dd1e9448604fb
+      internalID: -2063756710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileMap2_18
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ead5b844f7584147af921f45cd3de50
+      internalID: -1179962088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileMap2_19
       rect:
         serializedVersion: 2
         x: 128
         y: 0
-        width: 128
-        height: 128
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: abc7e92b814bcd530800000000000000
-      internalID: 3881174997055470778
+      spriteID: a568abc1dd5f4be468d219ecf76eba5d
+      internalID: 30015678
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dream Character Sprite Sheet_2
+      name: TileMap2_20
       rect:
         serializedVersion: 2
-        x: 256
-        y: 0
-        width: 128
-        height: 128
+        x: 147
+        y: 13
+        width: 13
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 38d387adfb894de30800000000000000
-      internalID: 4527411475185679747
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dream Character Sprite Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f1cb90b96b0cc5960800000000000000
-      internalID: 7592154962357500959
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dream Character Sprite Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 781ce8ef093695340800000000000000
-      internalID: 4853019547865629063
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dream Character Sprite Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3ab4bad606fd71010800000000000000
-      internalID: 1159641034320989091
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dream Character Sprite Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ae75ebe5fce8da610800000000000000
-      internalID: 1634119261104265194
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dream Character Sprite Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 540366a8ce706dbf0800000000000000
-      internalID: -300043612657930171
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dream Character Sprite Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 824915b7a78bfd460800000000000000
-      internalID: 7268731159793734696
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dream Character Sprite Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 1152
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 250db49e9070d04b0800000000000000
-      internalID: -5472710233035124654
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dream Character Sprite Sheet_10
-      rect:
-        serializedVersion: 2
-        x: 1280
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bb20f82a9c1cf1600800000000000000
-      internalID: 441284360265466555
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dream Character Sprite Sheet_11
-      rect:
-        serializedVersion: 2
-        x: 1408
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 271cb3f43271cef80800000000000000
-      internalID: -8076054591361531534
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dream Character Sprite Sheet_12
-      rect:
-        serializedVersion: 2
-        x: 1536
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b01a486cf511b14b0800000000000000
-      internalID: -5468758219461189365
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dream Character Sprite Sheet_13
-      rect:
-        serializedVersion: 2
-        x: 1664
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fa154ae97d3053600800000000000000
-      internalID: 447267962607653295
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dream Character Sprite Sheet_14
-      rect:
-        serializedVersion: 2
-        x: 1792
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 475fe8903a3538570800000000000000
-      internalID: 8467703684091802996
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dream Character Sprite Sheet_15
-      rect:
-        serializedVersion: 2
-        x: 1920
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c93fb061cf010a8d0800000000000000
-      internalID: -2837249090355727460
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dream Character Sprite Sheet_16
-      rect:
-        serializedVersion: 2
-        x: 2048
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 137adc8a9c5e0c780800000000000000
-      internalID: -8664673028777597135
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dream Character Sprite Sheet_17
-      rect:
-        serializedVersion: 2
-        x: 2176
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5d850c3e893a30990800000000000000
-      internalID: -7420907883925055275
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dream Character Sprite Sheet_18
-      rect:
-        serializedVersion: 2
-        x: 2304
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 73cf9352385dda610800000000000000
-      internalID: 1634196999047347255
+      spriteID: fcf872bbc688c944d8c2b0da9a309a1d
+      internalID: -856186241
       vertices: []
       indices: 
       edges: []
@@ -575,7 +625,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 468901d7a919928459e08d969cda7ded
+    spriteID: c0eb5af49c4336142955b6e25f218900
     internalID: 0
     vertices: []
     indices: 
@@ -585,25 +635,27 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Dream Character Sprite Sheet_0: 3824530337607672712
-      Dream Character Sprite Sheet_1: 3881174997055470778
-      Dream Character Sprite Sheet_10: 441284360265466555
-      Dream Character Sprite Sheet_11: -8076054591361531534
-      Dream Character Sprite Sheet_12: -5468758219461189365
-      Dream Character Sprite Sheet_13: 447267962607653295
-      Dream Character Sprite Sheet_14: 8467703684091802996
-      Dream Character Sprite Sheet_15: -2837249090355727460
-      Dream Character Sprite Sheet_16: -8664673028777597135
-      Dream Character Sprite Sheet_17: -7420907883925055275
-      Dream Character Sprite Sheet_18: 1634196999047347255
-      Dream Character Sprite Sheet_2: 4527411475185679747
-      Dream Character Sprite Sheet_3: 7592154962357500959
-      Dream Character Sprite Sheet_4: 4853019547865629063
-      Dream Character Sprite Sheet_5: 1159641034320989091
-      Dream Character Sprite Sheet_6: 1634119261104265194
-      Dream Character Sprite Sheet_7: -300043612657930171
-      Dream Character Sprite Sheet_8: 7268731159793734696
-      Dream Character Sprite Sheet_9: -5472710233035124654
+      TileMap2_0: 915080611
+      TileMap2_1: 1228961603
+      TileMap2_10: -753121131
+      TileMap2_11: 789360595
+      TileMap2_12: 78519338
+      TileMap2_13: 1438800810
+      TileMap2_14: -1723244589
+      TileMap2_15: 167573032
+      TileMap2_16: 606201967
+      TileMap2_17: -2063756710
+      TileMap2_18: -1179962088
+      TileMap2_19: 30015678
+      TileMap2_2: -1106509275
+      TileMap2_20: -856186241
+      TileMap2_3: 2117634152
+      TileMap2_4: 1221519834
+      TileMap2_5: 550594600
+      TileMap2_6: 1796458830
+      TileMap2_7: -947101882
+      TileMap2_8: -2110388205
+      TileMap2_9: 1620975486
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
