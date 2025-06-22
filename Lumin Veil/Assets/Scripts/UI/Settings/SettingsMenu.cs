@@ -13,15 +13,6 @@ public class SettingsMenu : MonoBehaviour
     public ListView TabBar = null;
     public ListView SettingsList = null;
 
-    /*
-    [Header("Temporary")]
-    public BoolSetting BoolSetting = new BoolSetting();
-    public ItemView ToggleItemView = null;
-    public FloatSetting FloatSetting = new FloatSetting();
-    public ItemView SliderItemView = null;
-    public MultiOptionSetting MultiOptionSetting = new MultiOptionSetting();
-    public ItemView DropDownItemView = null;
-    */
 
     private int selectedIndex = -1;
 
@@ -45,12 +36,6 @@ public class SettingsMenu : MonoBehaviour
         SettingsList.AddGestureHandler<Gesture.OnDrag, SliderVisuals>(HandleSliderDragged);
         SettingsList.AddGestureHandler<Gesture.OnClick, DropDownVisuals>(HandleDropDownClick);
 
-        //Temporary
-        /*
-        BindToggle(BoolSetting, ToggleItemView.Visuals as ToggleVisuals);
-        BindSlider(FloatSetting, SliderItemView.Visuals as SliderVisuals);
-        BindDropDown(MultiOptionSetting, DropDownItemView.Visuals as DropDownVisuals);
-        */
 
         SettingsList.AddDataBinder<BoolSetting, ToggleVisuals>(BindToggle);
         SettingsList.AddDataBinder<FloatSetting, SliderVisuals>(BindSlider);

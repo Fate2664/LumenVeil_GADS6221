@@ -1,5 +1,6 @@
 using Nova;
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [System.Serializable]
@@ -13,6 +14,7 @@ public class ToggleVisuals : ItemVisuals
     public Color HoverColor;
     public Color PressedColor;
 
+
     public bool IsChecked
     {
         get => CheckMark.gameObject.activeSelf;
@@ -22,11 +24,13 @@ public class ToggleVisuals : ItemVisuals
     internal static void HandleHover(Gesture.OnHover evt, ToggleVisuals target)
     {
         target.CheckBox.Color = target.HoverColor;
+        AudioManager.Instance?.PlaySFX("HoverSound");
     }
 
     internal static void HandlePress(Gesture.OnPress evt, ToggleVisuals target)
     {
         target.CheckBox.Color = target.PressedColor;
+        AudioManager.Instance?.PlaySFX("ClickSound");
     }
 
     internal static void HandleRelease(Gesture.OnRelease evt, ToggleVisuals target)

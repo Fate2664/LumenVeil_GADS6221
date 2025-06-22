@@ -29,11 +29,13 @@ public class TabButtonVisuals : ItemVisuals
     internal static void HandelPress(Gesture.OnPress evt, TabButtonVisuals target, int index)
     {
         target.Background.Gradient.Color = target.PressedGradientColor;
+        AudioManager.Instance?.PlaySFX("ClickSound");
     }
 
     internal static void HandleHover(Gesture.OnHover evt, TabButtonVisuals target, int index)
     {
         target.Background.Gradient.Color = target.HoveredGradientColor;
+        AudioManager.Instance?.PlaySFX("HoverSound");
     }
 
     internal static void HandleRelease(Gesture.OnRelease evt, TabButtonVisuals target, int index)
