@@ -1,3 +1,4 @@
+using System.Collections;
 using System.ComponentModel;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -22,6 +23,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Collider2D crouchDisableCollider;
     [SerializeField] private Transform playerGraphics;
     [SerializeField] private Vector3 lockedScale = new Vector3(3f, 3f, 3f);
+    [SerializeField] private Color knockbackColor = Color.red;
+
 
     [Header("Animator Component")]
     [Space(10)]
@@ -41,9 +44,12 @@ public class PlayerController : MonoBehaviour
     private const float groundedRadius = .2f;
     private const float ceilingRadius = .2f;
     private bool grounded;
+    private PlayerHeath playerHealth;
     private float moveDir;
     private bool shouldJump = false;
     private bool shouldCrouch = false;
+    private bool isKnockback = false;
+    private Coroutine flashRoutine;
     private Rigidbody2D rb;
 
     private void Awake()
@@ -59,14 +65,23 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
+    private void Start()
+    {
+        playerHealth = GetComponent<PlayerHeath>();
+    }
 
     void Update()
     {
+        if (playerHealth.isDead)
+        {
+            return;
+        }
+
         playerGraphics.localScale = lockedScale;
         shouldJump = false;
         shouldCrouch = false;
         moveDir = Input.GetAxis("Horizontal");
+
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
             shouldJump = true;
@@ -84,6 +99,11 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (playerHealth.isDead)
+        {
+            return;
+        }
+
         if (Input.GetAxis("Horizontal") < 0)
         {
             transform.localScale = new Vector3(-1f, 1f, 1f);
@@ -114,6 +134,10 @@ public class PlayerController : MonoBehaviour
 
     private void MoveCharacter(float direction,float moveSpeed, bool crouch, bool jump)
     {
+        if (isKnockback)
+        {
+            return;
+        }
         if (!crouch)
         {
             if (Physics2D.OverlapCircle(ceilingCheck.position, ceilingRadius, whatIsGround))
@@ -162,5 +186,51 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void ApplyKnockback(Transform source, float horizontalForce, float verticalForce)
+    {
+        if (playerHealth.isDead) return;
 
+        isKnockback = true;
+        Invoke(nameof(ResetKnockback), 0.3f); // Reset knockback after 0.5 seconds
+
+        if (flashRoutine != null)
+        {
+            StopCoroutine(flashRoutine);
+        }
+        flashRoutine = StartCoroutine(FlashDuringKnockback(0.5f)); // Flash for 0.5 seconds
+
+        // Determine direction: +1 = right, -1 = left
+        float direction = transform.position.x > source.position.x ? 1f : -1f;
+
+        // Clear current velocity
+        rb.linearVelocity = Vector2.zero;
+
+        // Apply force separately on X and Y
+        Vector2 knockback = new Vector2(direction * horizontalForce, verticalForce);
+        rb.AddForce(knockback, ForceMode2D.Impulse);
+
+       // Debug.DrawRay(transform.position, knockback, Color.red, 1f);
+    }
+
+    private void ResetKnockback()
+    {
+        isKnockback = false;
+    }
+
+    private IEnumerator FlashDuringKnockback(float duration, float flashSpeed = 0.1f)
+    {
+        SpriteRenderer spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        float elapsed = 0f; 
+        while (elapsed < duration)
+        {
+            spriteRenderer.enabled = false; // Hide sprite
+            yield return new WaitForSeconds(flashSpeed);
+            spriteRenderer.enabled = true; // Show sprite
+            spriteRenderer.color = knockbackColor; 
+            yield return new WaitForSeconds(flashSpeed);
+            elapsed += flashSpeed * 2; // Increment elapsed time
+        }
+        spriteRenderer.color = Color.white; // Reset color to white
+        spriteRenderer.enabled = true; // Ensure sprite is visible after flashing
+    }
 }

@@ -47,10 +47,11 @@ public class PlayerCombat : MonoBehaviour
 
         foreach (Collider2D enemy in hitEnemies)
         {
+            Vector2 attackDirection = (enemy.transform.position - transform.position).normalized;
             Enemy enemyComponent = enemy.GetComponent<Enemy>();
             if (enemyComponent != null)
             {
-                enemyComponent.TakeDamage(attackDamage);
+                enemyComponent.TakeDamage(attackDamage, attackDirection);
             }
         }
     }
