@@ -52,6 +52,7 @@ public class PlayerCombat : MonoBehaviour
             if (enemyComponent != null)
             {
                 enemyComponent.TakeDamage(attackDamage, attackDirection);
+                enemyComponent.ApplyKnockback(transform, 5, 6);
             }
         }
     }

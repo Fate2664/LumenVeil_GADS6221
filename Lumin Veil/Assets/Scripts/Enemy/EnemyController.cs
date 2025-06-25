@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private PlayerController playerController;
 
     [Header("Particles & Visuals")]
+    [SerializeField] private GameObject orbPrefab;
     [SerializeField] private ParticleSystem damageParticles;
     [SerializeField] private ParticleSystem deathParticles;
     [SerializeField] private Color damageColor = Color.red;
@@ -24,10 +25,13 @@ public class Enemy : MonoBehaviour
     private int currentHealth;
     private float lastDamageTime = -999f;
     private Coroutine damageCoroutine;
+    private bool isKnockback = false;
+    private Rigidbody2D rb;
 
     private void Start()
     {
         currentHealth = maxHeath;
+        rb = GetComponent<Rigidbody2D>();
     }
 
     public void TakeDamage(int damage, Vector2 attackDirection)
@@ -35,13 +39,10 @@ public class Enemy : MonoBehaviour
         currentHealth -= damage;
         SpawnDamageParticles(attackDirection);
 
-        if (damageCoroutine != null)
-            StopCoroutine(damageCoroutine);
-        damageCoroutine = StartCoroutine(Damage(0.5f));
-
         if (currentHealth <= 0)
         {
             SpawnDeathParticles();
+            SpawnOrb(); 
             Die();
         }
     }
@@ -51,12 +52,52 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public void ApplyKnockback(Transform source, float horizontalForce, float verticalForce)
+    {
+        if (playerHealth.isDead) return;
+
+        isKnockback = true;
+        Invoke(nameof(ResetKnockback), 0.3f); // Reset knockback after 0.5 seconds
+
+        if (damageCoroutine != null)
+        {
+            StopCoroutine(damageCoroutine);
+        }
+        damageCoroutine = StartCoroutine(Damage(0.5f)); // Flash for 0.5 seconds
+
+        // Determine direction: +1 = right, -1 = left
+        float direction = transform.position.x > source.position.x ? 1f : -1f;
+
+        // Clear current velocity
+        rb.linearVelocity = Vector2.zero;
+
+        // Apply force separately on X and Y
+        Vector2 knockback = new Vector2(direction * horizontalForce, verticalForce);
+        rb.AddForce(knockback, ForceMode2D.Impulse);
+
+        // Debug.DrawRay(transform.position, knockback, Color.red, 1f);
+    }
+
+    private void ResetKnockback()
+    {
+        isKnockback = false;
+    }
+
     private void SpawnDamageParticles(Vector2 attackDirection)
     {
         if (damageParticles != null)
         {
             Quaternion spawnRotation = Quaternion.FromToRotation(Vector2.right, attackDirection);
             Instantiate(damageParticles, transform.position, spawnRotation);
+        }
+    }
+
+    private void SpawnOrb()
+    {
+        Vector2 spawnPos = (Vector2)transform.position - new Vector2(0, 1f); // Adjust spawn position as needed
+        if (orbPrefab != null)
+        {
+            GameObject orb = Instantiate(orbPrefab, spawnPos, Quaternion.identity);
         }
     }
 

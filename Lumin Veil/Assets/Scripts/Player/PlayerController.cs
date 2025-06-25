@@ -25,6 +25,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Vector3 lockedScale = new Vector3(3f, 3f, 3f);
     [SerializeField] private Color knockbackColor = Color.red;
 
+    [Header("Connections")]
+    [SerializeField] private InventoryPanel inventoryPanel;
+    [SerializeField] private GameObject inventoryPanelPrefab;
 
     [Header("Animator Component")]
     [Space(10)]
@@ -75,6 +78,11 @@ public class PlayerController : MonoBehaviour
         if (playerHealth.isDead)
         {
             return;
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftAlt))
+        {
+            ToggleInventory();
         }
 
         playerGraphics.localScale = lockedScale;
@@ -131,6 +139,20 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void ToggleInventory()
+    {
+        if (inventoryPanelPrefab != null)
+        {
+            bool isActive = inventoryPanelPrefab.activeSelf;
+            inventoryPanelPrefab.SetActive(!isActive);
+
+            if (!isActive)
+            {
+                rb.linearVelocity = Vector2.zero; // Stop player movement when inventory is open
+                inventoryPanel.CharacterGrid.Refresh();
+            }
+        }
+    }
 
     private void MoveCharacter(float direction,float moveSpeed, bool crouch, bool jump)
     {
