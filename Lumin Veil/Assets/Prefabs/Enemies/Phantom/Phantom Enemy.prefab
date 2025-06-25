@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3310145941999547724}
   m_Layer: 8
   m_Name: Phantom Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,6 +84,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHeath: 100
+  contactDamage: 10
+  damageCooldown: 1
+  knockbackX: 5
+  knockbackY: 2
+  playerHealth: {fileID: 0}
+  playerController: {fileID: 0}
+  orbPrefab: {fileID: 0}
+  damageParticles: {fileID: 0}
+  deathParticles: {fileID: 0}
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1001 &2532037951045986687
 PrefabInstance:
   m_ObjectHideFlags: 0

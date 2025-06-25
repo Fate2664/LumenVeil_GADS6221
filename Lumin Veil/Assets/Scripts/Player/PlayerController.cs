@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float crouchSpeedMultiplier;
     [Range(5, 15)]
     [SerializeField] private float jumpForce;
+    [Range(2, 5)]
+    [SerializeField] private float rangeAttackRate = 2f;
 
     [Header("Player Setup")]
     [Space(10)]
@@ -24,6 +26,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform playerGraphics;
     [SerializeField] private Vector3 lockedScale = new Vector3(3f, 3f, 3f);
     [SerializeField] private Color knockbackColor = Color.red;
+    [SerializeField] private GameObject fireballPrefab;
+    [SerializeField] private Transform fireballSpawnPoint;
 
     [Header("Connections")]
     [SerializeField] private InventoryPanel inventoryPanel;
@@ -54,6 +58,7 @@ public class PlayerController : MonoBehaviour
     private bool isKnockback = false;
     private Coroutine flashRoutine;
     private Rigidbody2D rb;
+    private float nextRangeAttackTime = 0f;
 
     private void Awake()
     {
@@ -83,6 +88,13 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftAlt))
         {
             ToggleInventory();
+        }
+
+        if (Input.GetKeyDown(KeyCode.E) && inventoryPanel.HasRangeAttack() && Time.time >= nextRangeAttackTime )
+        {
+            Invoke(nameof(SpawnFireBall), .2f);
+            animator.SetTrigger("isRangeAttack");
+            nextRangeAttackTime = Time.time + 1f / rangeAttackRate;
         }
 
         playerGraphics.localScale = lockedScale;
@@ -139,6 +151,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void SpawnFireBall()
+    {
+        Vector2 fireDirection = transform.localScale.x > 0 ? Vector2.right : Vector2.left;
+        GameObject fireball = Instantiate(fireballPrefab, fireballSpawnPoint.position, Quaternion.identity);
+        fireball.GetComponent<FireBall>().SetDirection(fireDirection);
+    }
     private void ToggleInventory()
     {
         if (inventoryPanelPrefab != null)
@@ -150,6 +168,7 @@ public class PlayerController : MonoBehaviour
             {
                 rb.linearVelocity = Vector2.zero; // Stop player movement when inventory is open
                 inventoryPanel.CharacterGrid.Refresh();
+                inventoryPanel.PowerUpGrid.Refresh();
             }
         }
     }

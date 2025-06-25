@@ -5,6 +5,7 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private BoxCollider2D swordHitbox;
     [SerializeField] private LayerMask enemyLayer;
+    [SerializeField] private PlayerHeath playerHeath;
     [Range(0, 100)]
     [SerializeField] private int attackDamage = 20;
     [Range(0, 10)]
@@ -16,6 +17,8 @@ public class PlayerCombat : MonoBehaviour
 
     void Update()
     {
+        if (playerHeath.isDead) { return; }
+
         if (Input.GetMouseButtonDown(0) && Time.time >= nextAttackTime)
         {
             Attack();

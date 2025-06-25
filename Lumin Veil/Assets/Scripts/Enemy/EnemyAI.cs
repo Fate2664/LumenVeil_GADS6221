@@ -13,12 +13,13 @@ public class EnemyAI : MonoBehaviour
 
     Seeker seeker;
     Rigidbody2D rb;
+    EnemyLookRange lookRange;
 
     void Start()
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
-
+        lookRange = GetComponentInChildren<EnemyLookRange>();
         InvokeRepeating("UpdatePath", 0f, 0.5f); // Update path every 0.5 seconds
 
        
@@ -30,37 +31,40 @@ public class EnemyAI : MonoBehaviour
         {
             return; // No path to follow
         }
-
-        if (currentWaypoint >= path.vectorPath.Count)
+        if (lookRange.inLookRange)
         {
-            reachedEndOfPath = true;
-            return; // Reached the end of the path
-        }
-        else
-        {
-            reachedEndOfPath = false;
-        }
 
-        Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - (Vector2)rb.position).normalized;
-        Vector2 force = direction * speed * Time.deltaTime;
+            if (currentWaypoint >= path.vectorPath.Count)
+            {
+                reachedEndOfPath = true;
+                return; // Reached the end of the path
+            }
+            else
+            {
+                reachedEndOfPath = false;
+            }
+
+            Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - (Vector2)rb.position).normalized;
+            Vector2 force = direction * speed * Time.deltaTime;
 
 
-        rb.AddForce(force);
+            rb.AddForce(force);
 
-        float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
+            float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
 
-        if (distance < nextWaypointDistance)
-        {
-            currentWaypoint++;
-        }
+            if (distance < nextWaypointDistance)
+            {
+                currentWaypoint++;
+            }
 
-        if (force.x >= 0.01f)
-        {
-            transform.localScale = new Vector3(1, 1, 1); // Facing right
-        }
-        else if (force.x <= -0.01f)
-        {
-            transform.localScale = new Vector3(-1, 1, 1); // Facing left
+            if (force.x >= 0.01f)
+            {
+                transform.localScale = new Vector3(1, 1, 1); // Facing right
+            }
+            else if (force.x <= -0.01f)
+            {
+                transform.localScale = new Vector3(-1, 1, 1); // Facing left
+            } 
         }
     }
 
