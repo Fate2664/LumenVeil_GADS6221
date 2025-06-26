@@ -8,6 +8,8 @@ TagManager:
   - RangeAttack
   - Enemy
   - AttackRange
+  - PopupRange
+  - TallGrass
   layers:
   - Default
   - TransparentFX

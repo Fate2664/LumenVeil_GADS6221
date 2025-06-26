@@ -2,11 +2,10 @@ using UnityEngine;
 
 public class FireBall : MonoBehaviour
 {
-    [SerializeField] private PlayerCombat playerCombat;
     [SerializeField] private int attackDamage = 50;
     [SerializeField] private float speed = 10f;
     [SerializeField] private float lifeSpan = 5f;
-
+   
     private Vector2 direction;
 
     public void SetDirection(Vector2 dir)
@@ -38,8 +37,12 @@ public class FireBall : MonoBehaviour
                 enemyComponent.ApplyKnockback(transform, 5, 6);
             }
         }
+        else
+        if (collision.CompareTag("TallGrass"))
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
 
-        // Destroy the fireball after hitting an enemy
-        Destroy(gameObject);
     }
 }

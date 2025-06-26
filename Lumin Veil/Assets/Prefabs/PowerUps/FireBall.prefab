@@ -83,10 +83,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c7e832a47af61f4b8ae05cb347f8613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCombat: {fileID: 0}
   attackDamage: 50
   speed: 10
   lifeSpan: 5
+  tallGrass1: {fileID: 0}
+  tallGrass2: {fileID: 0}
 --- !u!1001 &1597195156434616324
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -95,6 +96,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7069492477371504756}
     m_Modifications:
+    - target: {fileID: 481167005827326420, guid: ef985f62520e4b94ca001a6f1d7113c5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 3774898843441458437, guid: ef985f62520e4b94ca001a6f1d7113c5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
