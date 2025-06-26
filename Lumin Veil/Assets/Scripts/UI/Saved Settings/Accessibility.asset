@@ -14,20 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Category: Accessibility
   Settings:
-  - rid: 7332598095929147486
   - rid: 7332598095929147494
   references:
     version: 2
     RefIds:
-    - rid: 7332598095929147486
-      type: {class: BoolSetting, ns: , asm: Assembly-CSharp}
-      data:
-        Name: Color Blind Mode
-        State: 0
     - rid: 7332598095929147494
       type: {class: MultiOptionSetting, ns: , asm: Assembly-CSharp}
       data:
-        Name: Control Preset
+        Key: ControlPreset
+        Name: Controls Preset
         Options:
         - WASD Controls
         - Arrow Keys

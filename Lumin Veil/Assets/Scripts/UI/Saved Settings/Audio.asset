@@ -24,32 +24,40 @@ MonoBehaviour:
     - rid: 7332598095929147488
       type: {class: FloatSetting, ns: , asm: Assembly-CSharp}
       data:
+        Key: MasterVolume
         Name: Master Volume
-        value: 38.61581
+        value: 75.08657
         Min: 0
         Max: 100
         ValueFormat: '{0:0}'
+        DefaultValue: 50
     - rid: 7332598095929147489
       type: {class: FloatSetting, ns: , asm: Assembly-CSharp}
       data:
+        Key: Effects
         Name: Particle Effects
-        value: 51.347458
+        value: 70.7751
         Min: 0
         Max: 100
         ValueFormat: '{0:0}'
+        DefaultValue: 50
     - rid: 7332598095929147490
       type: {class: FloatSetting, ns: , asm: Assembly-CSharp}
       data:
+        Key: Menu
         Name: Menu
-        value: 47.127895
+        value: 69.18167
         Min: 0
         Max: 100
         ValueFormat: '{0:0}'
+        DefaultValue: 50
     - rid: 7332598095929147491
       type: {class: FloatSetting, ns: , asm: Assembly-CSharp}
       data:
+        Key: Music
         Name: Music
-        value: 37.094154
+        value: 50
         Min: 0
         Max: 100
         ValueFormat: '{0:0}'
+        DefaultValue: 50

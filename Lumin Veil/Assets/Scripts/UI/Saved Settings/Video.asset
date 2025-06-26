@@ -22,15 +22,19 @@ MonoBehaviour:
     - rid: 7332598095929147495
       type: {class: MultiOptionSetting, ns: , asm: Assembly-CSharp}
       data:
-        Name: Graphics Quality
+        Key: Resolution
+        Name: Resolution
         Options:
         - Ultra
         - High
         - Medium
         - Low
         SelectedIndex: 1
+        DefaultIndex: 0
     - rid: 7332598095929147496
       type: {class: BoolSetting, ns: , asm: Assembly-CSharp}
       data:
+        Key: ParticlesEnabled
         Name: Enable Particle Effects
         State: 1
+        DefaultValue: 1

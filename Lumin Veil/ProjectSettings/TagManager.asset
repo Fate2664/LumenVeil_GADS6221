@@ -10,6 +10,7 @@ TagManager:
   - AttackRange
   - PopupRange
   - TallGrass
+  - Snake
   layers:
   - Default
   - TransparentFX

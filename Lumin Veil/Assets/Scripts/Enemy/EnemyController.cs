@@ -5,12 +5,12 @@ public class Enemy : MonoBehaviour
 {
     [Header("Health & Damage")]
     [SerializeField] private int maxHeath = 100;
-    [SerializeField] private int contactDamage = 10;
+    [SerializeField] public int contactDamage = 10;
     [SerializeField] private float damageCooldown = 1f;
 
     [Header("Knockback")]
-    [SerializeField] private float knockbackX = 5f;
-    [SerializeField] private float knockbackY = 2f;
+    [SerializeField] public float knockbackX = 5f;
+    [SerializeField] public float knockbackY = 2f;
 
     [Header("Player References")]
     [SerializeField] private PlayerHeath playerHealth;
@@ -37,12 +37,18 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage, Vector2 attackDirection)
     {
         currentHealth -= damage;
-        SpawnDamageParticles(attackDirection);
+        if (SettingsManager.Instance.ParticlesEnabled)
+        {
+            SpawnDamageParticles(attackDirection);
+        }
 
         if (currentHealth <= 0)
         {
-            SpawnDeathParticles();
-            SpawnOrb(); 
+            if (SettingsManager.Instance.ParticlesEnabled)
+            {
+                SpawnDeathParticles();
+            }
+            SpawnOrb();
             Die();
         }
     }
