@@ -1,6 +1,7 @@
 using Nova;
 using UnityEngine;
 using UnityEngine.Events;
+using static Nova.Gesture;
 
 namespace NovaSamples.UIControls
 {
@@ -11,7 +12,7 @@ namespace NovaSamples.UIControls
     {
         [Tooltip("Event fired when the button is clicked.")]
         public UnityEvent OnClicked = null;
-
+        public UnityEvent OnHover = null;
         private void OnEnable()
         {
             if (View.TryGetVisuals(out ButtonVisuals visuals))
@@ -22,6 +23,7 @@ namespace NovaSamples.UIControls
 
             // Subscribe to desired events
             View.UIBlock.AddGestureHandler<Gesture.OnClick, ButtonVisuals>(HandleClicked);
+            View.UIBlock.AddGestureHandler<Gesture.OnHover, ButtonVisuals>(HandleHovered);
             View.UIBlock.AddGestureHandler<Gesture.OnHover, ButtonVisuals>(ButtonVisuals.HandleHovered);
             View.UIBlock.AddGestureHandler<Gesture.OnUnhover, ButtonVisuals>(ButtonVisuals.HandleUnhovered);
             View.UIBlock.AddGestureHandler<Gesture.OnPress, ButtonVisuals>(ButtonVisuals.HandlePressed);
@@ -45,6 +47,15 @@ namespace NovaSamples.UIControls
         /// </summary>
         /// <param name="evt">The click event data.</param>
         /// <param name="visuals">The buttons visuals which received the click.</param>
-        private void HandleClicked(Gesture.OnClick evt, ButtonVisuals visuals) => OnClicked?.Invoke();
+        private void HandleClicked(Gesture.OnClick evt, ButtonVisuals visuals)
+        {
+            OnClicked?.Invoke();
+
+        }
+        private void HandleHovered(Gesture.OnHover evt, ButtonVisuals visuals)
+        {
+            OnHover?.Invoke();
+            visuals.UpdateVisualState(VisualState.Hovered);
+        }
     }
 }

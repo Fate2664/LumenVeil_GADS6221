@@ -28,6 +28,7 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
         }
+        PlaySFX("MenuMusic");
     }
 
     public void PlaySFX(string name)
@@ -40,6 +41,15 @@ public class AudioManager : MonoBehaviour
             return;
 
         Array.Find(sounds, sound => sound.name == name)?.source.Play();
+    }
+
+    public void StopSFX(string name)
+    {
+        Sound sound = Array.Find(sounds, s => s.name == name);
+        if (sound != null && sound.source.isPlaying)
+        {
+            sound.source.Stop();
+        }
     }
 
 }

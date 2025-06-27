@@ -12,6 +12,7 @@ public class RangeAttackPickup : MonoBehaviour
             if (inventoryPanel != null)
             {
                 inventoryPanel.AddItemToPowerUpsInventory(rangeAttackPowerUp, 1);
+                AudioManager.Instance?.PlaySFX("PowerupPickup");
             }
             Destroy(gameObject); // Destroy the orb after pickup
         }

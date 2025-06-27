@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndDialogueTrigger : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class EndDialogueTrigger : MonoBehaviour
 
         FindAnyObjectByType<DialogueManager>().StartEnd(endDialogue);
         fadeController.FadeToBlack();
+        Invoke(nameof(ReturnToMainMenu), 10f);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -25,4 +27,13 @@ public class EndDialogueTrigger : MonoBehaviour
             }
         }
     }
+
+    private void ReturnToMainMenu()
+    {
+        SceneManager.LoadScene("Menu");
+        AudioManager.Instance?.StopSFX("GameplayMusic");
+        AudioManager.Instance?.PlaySFX("MenuMusic");
+    }
+
+  
 }

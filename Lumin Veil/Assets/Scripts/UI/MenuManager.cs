@@ -5,6 +5,8 @@ public class MenuManager : MonoBehaviour
 {
     public void StartGame()
     {
+        AudioManager.Instance?.PlaySFX("GameplayMusic");
+        AudioManager.Instance?.StopSFX("MenuMusic");
         SceneManager.LoadScene("Level 1");
     }
 

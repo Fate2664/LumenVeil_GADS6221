@@ -94,6 +94,7 @@ public class PlayerController : MonoBehaviour
         {
             Invoke(nameof(SpawnFireBall), .2f);
             animator.SetTrigger("isRangeAttack");
+            AudioManager.Instance?.PlaySFX("FireBall");
             nextRangeAttackTime = Time.time + 1f / rangeAttackRate;
         }
 

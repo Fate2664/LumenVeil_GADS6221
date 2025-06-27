@@ -47,6 +47,14 @@ public class PlayerCombat : MonoBehaviour
             0f,
             enemyLayer
         );
+        if (hitEnemies.Length > 0)
+        {
+            AudioManager.Instance?.PlaySFX("SwordSwingHit");
+        }
+        else
+        {
+            AudioManager.Instance?.PlaySFX("SwordSwingMiss");
+        }
 
         foreach (Collider2D enemy in hitEnemies)
         {
