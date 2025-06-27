@@ -43,8 +43,8 @@ public class DeathScreen : MonoBehaviour
     private void LoadMainMenu()
     {
         Time.timeScale = 1f;            //reset the game timer
-        //AudioManager.Instance?.StopSFX("GameplayMusic"); //Stop the gameplay music
-       // AudioManager.Instance?.PlaySFX("MenuMusic"); //Play the main menu music
+        AudioManager.Instance?.StopSFX("GameplayMusic"); //Stop the gameplay music
+        AudioManager.Instance?.PlaySFX("MenuMusic"); //Play the main menu music
         SceneManager.LoadScene("Menu");      //load the main menu
     }
 

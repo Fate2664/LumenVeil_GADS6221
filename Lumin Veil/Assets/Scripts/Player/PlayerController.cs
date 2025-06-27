@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
             ToggleInventory();
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && inventoryPanel.HasRangeAttack() && Time.time >= nextRangeAttackTime )
+        if (Input.GetKeyDown(KeyCode.E) && inventoryPanel.HasRangeAttack() && Time.time >= nextRangeAttackTime)
         {
             Invoke(nameof(SpawnFireBall), .2f);
             animator.SetTrigger("isRangeAttack");
@@ -101,21 +101,52 @@ public class PlayerController : MonoBehaviour
         playerGraphics.localScale = lockedScale;
         shouldJump = false;
         shouldCrouch = false;
-        moveDir = Input.GetAxis("Horizontal");
 
-        if (Input.GetKeyDown(KeyCode.Space) && grounded)
+        moveDir = 0f;
+        if (PlayerControlSettings.CurrentPreset == "WASD")
         {
-            shouldJump = true;
+            if (Input.GetKey(KeyCode.A))
+            {
+                moveDir = -1f;
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                moveDir = 1f;
+            }
         }
-        if (Input.GetKey(KeyCode.LeftControl) && grounded)
+        else
+        if (PlayerControlSettings.CurrentPreset == "ArrowKeys")
         {
-            shouldCrouch = true;
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                moveDir = -1f;
+            }
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                moveDir = 1f;
+            }
+        }
+
+
+        if (PlayerControlSettings.CurrentPreset == "WASD")
+        {
+            if (Input.GetKeyDown(KeyCode.Space) && grounded)
+                shouldJump = true;
+            if (Input.GetKey(KeyCode.LeftControl) && grounded)
+                shouldCrouch = true;
+        }
+        else if (PlayerControlSettings.CurrentPreset == "ArrowKeys")
+        {
+            if (Input.GetKeyDown(KeyCode.UpArrow) && grounded)
+                shouldJump = true;
+            if (Input.GetKey(KeyCode.DownArrow) && grounded)
+                shouldCrouch = true;
         }
 
         bool isInAir = !grounded && Mathf.Abs(rb.linearVelocity.y) > 0.1f;
         animator.SetBool("isJumping", isInAir);
 
-        MoveCharacter(moveDir,moveSpeed, shouldCrouch ,shouldJump);
+        MoveCharacter(moveDir, moveSpeed, shouldCrouch, shouldJump);
     }
 
     private void FixedUpdate()
@@ -174,7 +205,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void MoveCharacter(float direction,float moveSpeed, bool crouch, bool jump)
+    private void MoveCharacter(float direction, float moveSpeed, bool crouch, bool jump)
     {
         if (isKnockback)
         {
@@ -251,7 +282,7 @@ public class PlayerController : MonoBehaviour
         Vector2 knockback = new Vector2(direction * horizontalForce, verticalForce);
         rb.AddForce(knockback, ForceMode2D.Impulse);
 
-       // Debug.DrawRay(transform.position, knockback, Color.red, 1f);
+        // Debug.DrawRay(transform.position, knockback, Color.red, 1f);
     }
 
     private void ResetKnockback()
@@ -262,13 +293,13 @@ public class PlayerController : MonoBehaviour
     private IEnumerator FlashDuringKnockback(float duration, float flashSpeed = 0.1f)
     {
         SpriteRenderer spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        float elapsed = 0f; 
+        float elapsed = 0f;
         while (elapsed < duration)
         {
             spriteRenderer.enabled = false; // Hide sprite
             yield return new WaitForSeconds(flashSpeed);
             spriteRenderer.enabled = true; // Show sprite
-            spriteRenderer.color = knockbackColor; 
+            spriteRenderer.color = knockbackColor;
             yield return new WaitForSeconds(flashSpeed);
             elapsed += flashSpeed * 2; // Increment elapsed time
         }

@@ -3,7 +3,7 @@ using System;
 
 public class AudioManager : MonoBehaviour
 {
-    [Header ("Audio Clips")]
+    [Header("Audio Clips")]
     [SerializeField] Sound[] sounds;
 
     public static AudioManager Instance { get; private set; }
@@ -27,20 +27,32 @@ public class AudioManager : MonoBehaviour
 
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
+            s.source.loop = s.loop;
         }
         PlaySFX("MenuMusic");
     }
 
     public void PlaySFX(string name)
     {
-        if (Array.Exists(sounds, sound => sound.name == name && sound.source.isPlaying))
-        {
-            Array.Find(sounds, sound => sound.name == name)?.source.Stop();
-        }
-        if (Array.Find(sounds, sound => sound.name == name) == null)
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
             return;
 
-        Array.Find(sounds, sound => sound.name == name)?.source.Play();
+        // Stop duplicate
+        if (s.source.isPlaying)
+        {
+            s.source.Stop();
+        }
+
+        if (s.source.loop)
+        {
+            s.source.loop = true;
+        }
+        // Compute effective volume
+        float categoryVolume = GetCategoryVolume(s.category);
+        s.source.volume = (s.volume * categoryVolume * (SettingsManager.Instance.MasterVolume / 100) / 100);
+
+        s.source.Play();
     }
 
     public void StopSFX(string name)
@@ -52,4 +64,27 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    private float GetCategoryVolume(SoundCategory category)
+    {
+        switch (category)
+        {
+            case SoundCategory.Music:
+                return SettingsManager.Instance.MusicVolume;
+            case SoundCategory.Effects:
+                return SettingsManager.Instance.EffectsVolume;
+            case SoundCategory.Menu:
+                return SettingsManager.Instance.MenuVolume;
+            default:
+                return 1f;
+        }
+    }
+
+    public void RefreshAllVolumes()
+    {
+        foreach (Sound s in sounds)
+        {
+            float categoryVolume = GetCategoryVolume(s.category);
+            s.source.volume = s.volume * categoryVolume * SettingsManager.Instance.MasterVolume;
+        }
+    }
 }

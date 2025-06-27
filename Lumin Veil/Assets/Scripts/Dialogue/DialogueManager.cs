@@ -170,9 +170,12 @@ public class DialogueManager : MonoBehaviour
 
     public void ResetEndDialogue()
     {
-        StopAllCoroutines();
-        sentences.Clear();
-        endText.Text = "";
-        animator.SetBool("isEnd", false);
+        if (sentences != null && animator != null)
+        {
+            StopAllCoroutines();
+            sentences.Clear();
+            endText.Text = "";
+            animator.SetBool("isEnd", false); 
+        }
     }
 }

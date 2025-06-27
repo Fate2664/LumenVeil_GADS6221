@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 [System.Serializable]
 public abstract class Setting
@@ -10,7 +11,7 @@ public abstract class Setting
 }
 
 [System.Serializable]
-public class BoolSetting : Setting  
+public class BoolSetting : Setting
 {
     public bool State;
     public bool DefaultValue = false;
@@ -18,7 +19,7 @@ public class BoolSetting : Setting
     public void Save() => PlayerPrefs.SetInt(Key, State ? 1 : 0);
     public void Load() => State = PlayerPrefs.GetInt(Key, DefaultValue ? 1 : 0) == 1;
 
-    public override void ResetToDefault() 
+    public override void ResetToDefault()
     {
         State = DefaultValue;
         Save();
@@ -71,5 +72,33 @@ public class MultiOptionSetting : Setting
     {
         SelectedIndex = DefaultIndex;
         Save();
+    }
+}
+
+[System.Serializable]
+public class ResolutionSetting : MultiOptionSetting
+{
+    public Resolution[] Resolutions;
+
+    public void Initialize()
+    {
+        Resolutions = Screen.resolutions;
+        Options = new string[Resolutions.Length];
+        for (int i = 0; i < Resolutions.Length; i++)
+        {
+            Resolution r = Resolutions[i];
+            Options[i] = $"{r.width} x {r.height} @{r.refreshRateRatio}Hz";
+        }
+    }
+    public Resolution GetSelectedResolution()
+    {
+
+        if (Resolutions == null || Resolutions.Length == 0)
+        {
+            Initialize();
+        }
+
+        return Resolutions[Mathf.Clamp(SelectedIndex, 0, Resolutions.Length - 1)];
+
     }
 }

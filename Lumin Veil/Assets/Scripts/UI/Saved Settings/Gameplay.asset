@@ -15,7 +15,6 @@ MonoBehaviour:
   Category: Gameplay
   Settings:
   - rid: 7332598095929147492
-  - rid: 7332598095929147493
   references:
     version: 2
     RefIds:
@@ -29,13 +28,5 @@ MonoBehaviour:
         - Medium
         - Hard
         - Nightmare
-        SelectedIndex: 0
-    - rid: 7332598095929147493
-      type: {class: FloatSetting, ns: , asm: Assembly-CSharp}
-      data:
-        Key: Brightness
-        Name: Brightness
-        value: 65.01106
-        Min: 0
-        Max: 100
-        ValueFormat: '{0:0}'
+        SelectedIndex: 1
+        DefaultIndex: 0

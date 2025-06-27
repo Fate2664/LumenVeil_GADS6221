@@ -771,6 +771,10 @@ PrefabInstance:
       value: 93.4
       objectReference: {fileID: 0}
     - target: {fileID: 2905764967384224460, guid: 33994460efecd9d4794903c0f8d9a630, type: 3}
+      propertyPath: visuals.FillEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905764967384224460, guid: 33994460efecd9d4794903c0f8d9a630, type: 3}
       propertyPath: visuals.Border.Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -1674,7 +1678,6 @@ MonoBehaviour:
   SettingsCollection:
   - {fileID: 11400000, guid: ab2009e10ceedfe428452d2e7c6848d9, type: 2}
   - {fileID: 11400000, guid: 29143bde9a84b2e4eb5ce7b55d38c61e, type: 2}
-  - {fileID: 11400000, guid: 0a166ba767bd48948947cf473828123f, type: 2}
   - {fileID: 11400000, guid: fcac52415cc48074f938b8bcd7281ec1, type: 2}
   - {fileID: 11400000, guid: d456af44bffe60d4da6f326a023d3734, type: 2}
   TabBar: {fileID: 1817203164}

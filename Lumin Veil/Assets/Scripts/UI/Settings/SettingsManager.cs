@@ -21,7 +21,6 @@ public class SettingsManager : MonoBehaviour
     public bool ParticlesEnabled => PlayerPrefs.GetInt("ParticlesEnabled", 1) == 1;
     public float MasterVolume => PlayerPrefs.GetFloat("MasterVolume", 1f);
     public int Difficulty => PlayerPrefs.GetInt("Difficulty", 0);
-    public float Brightness => PlayerPrefs.GetFloat("Brightness", 0.5f);
     public float EffectsVolume => PlayerPrefs.GetFloat("Effects", 1f);
     public float MusicVolume => PlayerPrefs.GetFloat("Music", 1f);
     public float MenuVolume => PlayerPrefs.GetFloat("Menu", 1f);

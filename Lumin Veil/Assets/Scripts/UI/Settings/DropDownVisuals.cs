@@ -21,6 +21,8 @@ public class DropDownVisuals : ItemVisuals
     public UIBlock ExpandedRoot = null;
     public ListView OptionsList = null;
 
+    public Action<int> OnOptionSelected;
+
     public Color DefaultColor;
     public Color HoveredColor;
     public Color PressedColor;
@@ -113,6 +115,7 @@ public class DropDownVisuals : ItemVisuals
     {
         dataSource.SelectedIndex = index;
         SelectedLabel.Text = dataSource.CurrentSelection;
+        OnOptionSelected?.Invoke(index);
         evt.Consume();
         Collapse();
     }

@@ -1,4 +1,4 @@
-using Nova;
+﻿using Nova;
 using NovaSamples.UIControls;
 using System;
 using System.Collections.Generic;
@@ -39,10 +39,10 @@ public class SettingsMenu : MonoBehaviour
         SettingsList.AddGestureHandler<Gesture.OnDrag, SliderVisuals>(HandleSliderDragged);
         SettingsList.AddGestureHandler<Gesture.OnClick, DropDownVisuals>(HandleDropDownClick);
 
-
         SettingsList.AddDataBinder<BoolSetting, ToggleVisuals>(BindToggle);
         SettingsList.AddDataBinder<FloatSetting, SliderVisuals>(BindSlider);
         SettingsList.AddDataBinder<MultiOptionSetting, DropDownVisuals>(BindDropDown);
+        SettingsList.AddDataBinder<ResolutionSetting, DropDownVisuals>(BindResolution);
 
         //Tabs
         TabBar.AddDataBinder<SettingsCollection, TabButtonVisuals>(BindTab);
@@ -60,6 +60,7 @@ public class SettingsMenu : MonoBehaviour
         }
 
     }
+
 
     private void OnDisable()
     {
@@ -83,6 +84,8 @@ public class SettingsMenu : MonoBehaviour
         SettingsList.SetDataSource(CurrentSettings);
     }
 
+
+
     #region HandleData
     private void HandleTabClicked(Gesture.OnClick evt, TabButtonVisuals target, int index)
     {
@@ -91,15 +94,41 @@ public class SettingsMenu : MonoBehaviour
 
     private void HandleDropDownClick(Gesture.OnClick evt, DropDownVisuals target, int index)
     {
-        MultiOptionSetting setting = CurrentSettings[index] as MultiOptionSetting;
+        Setting genericSetting = CurrentSettings[index];
 
         if (target.isExpanded)
         {
             target.Collapse();
+            return;
+        }
+
+        if (genericSetting is ResolutionSetting resolutionSetting)
+        {
+            target.OnOptionSelected = (newIndex) =>
+            {
+                resolutionSetting.SelectedIndex = newIndex;
+                resolutionSetting.Save();
+
+                Resolution selectedRes = resolutionSetting.GetSelectedResolution();
+                Screen.SetResolution(selectedRes.width, selectedRes.height, Screen.fullScreenMode, selectedRes.refreshRateRatio);
+            };
+
+            target.Expand(resolutionSetting);
+        }
+        else if (genericSetting is MultiOptionSetting multiOptionSetting)
+        {
+            // ✅ It is a MultiOptionSetting
+            target.OnOptionSelected = (newIndex) =>
+            {
+                multiOptionSetting.SelectedIndex = newIndex;
+                multiOptionSetting.Save();
+            };
+
+            target.Expand(multiOptionSetting);
         }
         else
         {
-            target.Expand(setting);
+            Debug.LogError($"Unknown setting type for dropdown at index {index}: {genericSetting?.GetType()}");
         }
     }
 
@@ -119,6 +148,8 @@ public class SettingsMenu : MonoBehaviour
 
         target.FillBar.Size.X.Percent = percentFromLeft;
         target.ValueLabel.Text = setting.DisplayValue;
+
+       
     }
 
     private void HandleToggleClick(Gesture.OnClick evt, ToggleVisuals target, int index)
@@ -127,6 +158,7 @@ public class SettingsMenu : MonoBehaviour
         setting.State = !setting.State;
         target.IsChecked = setting.State;
     }
+
 
     #endregion
 
@@ -160,6 +192,21 @@ public class SettingsMenu : MonoBehaviour
         visuals.Collapse();
     }
 
+    private void BindResolution(Data.OnBind<ResolutionSetting> evt, DropDownVisuals visuals, int index)
+    {
+        ResolutionSetting setting = evt.UserData;
+
+        // Initialize if needed
+        if (setting.Options == null || setting.Options.Length == 0)
+        {
+            setting.Initialize(); // Populate Options & Resolutions array
+        }
+
+        visuals.label.Text = setting.Name;
+        visuals.SelectedLabel.Text = setting.Options[setting.SelectedIndex];
+        visuals.Collapse();
+    }
+   
     #endregion
 
     public void ResetAllSettings()
